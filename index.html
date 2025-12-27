@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LootUp 分享｜Joy 的實測心得</title>
+
+  <meta name="description" content="LootUp 真實分享｜用零碎時間玩遊戲賺 PayPal 現金，新手可直接開始。">
+  <meta name="language" content="zh-Hant">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f4f6fb;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: auto;
+      background: #fff;
+      padding: 28px 22px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .highlight {
+      background: #f0f6ff;
+      border-left: 4px solid #0070f3;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      margin: 16px 0;
+    }
+
+    .cta {
+      display: block;
+      text-align: center;
+      margin: 22px 0 12px;
+      padding: 18px;
+      background: #0070f3;
+      color: #fff;
+      font-size: 17px;
+      font-weight: bold;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: 0.25s;
+    }
+
+    .cta:hover {
+      background: #005edb;
+      transform: scale(1.03);
+    }
+
+    .copy-box {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .copy-input {
+      width: 100%;
+      max-width: 360px;
+      padding: 12px;
+      font-size: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .copy-btn {
+      margin-top: 10px;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 12px;
+      background: #222;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .copy-success {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #1a7f37;
+      display: none;
+    }
+
+    .faq {
+      margin-top: 30px;
+    }
+
+    .faq-item {
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 3px solid #0070f3;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .note {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>嗨，我是 Joy 👋</h1>
+    <p>
+      這一頁是我自己在用 <strong>LootUp</strong> 的真實分享。  
+      如果你跟我一樣，想把零碎時間換成一點 PayPal 現金，可以參考看看。
+    </p>
+
+    <div class="highlight">
+      ✔ 免費註冊  
+      ✔ 不需要先付錢  
+      ✔ 玩遊戲 / 看廣告就能累積點數
+    </div>
+
+    <a class="cta" href="https://lootup.me?refer=7405523" target="_blank">
+      👉 前往 LootUp 官方網站註冊
+    </a>
+
+    <div class="copy-box">
+      <p><strong>我的推薦連結（可一鍵複製）：</strong></p>
+      <input
+        type="text"
+        id="refLink"
+        class="copy-input"
+        value="https://lootup.me?refer=7405523"
+        readonly
+      >
+      <br>
+      <button class="copy-btn" onclick="copyLink()">複製推薦連結</button>
+      <div class="copy-success" id="copySuccess">已成功複製 👍</div>
+    </div>
+
+    <div class="faq">
+      <h2>常見問題</h2>
+
+      <div class="faq-item">
+        <strong>Q：一定要花錢嗎？</strong>
+        不用，完全免費，我自己也沒有先投入任何費用。
+      </div>
+
+      <div class="faq-item">
+        <strong>Q：多久可以兌換？</strong>
+        看你使用的頻率，點數到門檻後即可申請 PayPal。
+      </div>
+
+      <div class="faq-item">
+        <strong>Q：推薦連結有差嗎？</strong>
+        使用推薦連結註冊，可以建立推薦關係，對我來說也是一種支持。
+      </div>
+    </div>
+
+    <div class="note">
+      本頁為個人使用心得分享，實際收益依個人投入時間與平台規則而異。
+    </div>
+  </div>
+
+  <script>
+    function copyLink() {
+      const input = document.getElementById("refLink");
+      input.select();
+      input.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(input.value).then(() => {
+        const msg = document.getElementById("copySuccess");
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
